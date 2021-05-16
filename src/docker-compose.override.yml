@@ -12,7 +12,16 @@ services:
     container_name: basketdb
     restart: always
     ports:
-      - "6379:6379"   
+      - "6379:6379"
+  portainer:
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portianer_data:/data
 
   catalog.api:
     container_name: catalog.api
