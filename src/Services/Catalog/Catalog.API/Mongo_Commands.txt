@@ -41,3 +41,5 @@ db.Products.remove({})
 
 show databases
 show collections
+-------MongoClient GUI
+docker run -d -p 3000:3000 mongoclient/mongoclient
