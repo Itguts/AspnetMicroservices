@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=vikash14_12@hotmail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
+      - PGADMIN_ENABLE_TLS=YES
+    restart: always
+    ports:
+      -  "5050:80"
+    volumes:
+      -  pgadmin_data:/var/.pgadmin
+
+
+
+
+
+
+

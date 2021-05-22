@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:  
+  discountdb:
+    image: postgres:alpine
+
+volumes:
+  postgres_data:
+

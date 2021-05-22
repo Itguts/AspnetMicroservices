@@ -8,7 +8,7 @@ services:
     image: redis:alpine
   
   discountdb:
-    image: postgres
+    image: postgres:alpine
 
   pgadmin:
     image: dpage/pgadmin4
@@ -29,7 +29,7 @@ services:
       dockerfile: Services/Basket/Basket.API/Dockerfile
 
   discount.api:
-    image: ${DOCKER_REGISTRY-}basketapi
+    image: ${DOCKER_REGISTRY-}discountapi
     build:
       context: .
       dockerfile: Services/Discount/Discount.API/Dockerfile
@@ -44,4 +44,4 @@ volumes:
   mongo_data:
   portainer_data:
   postgres_data:
-  pagadmin_data:
+  pgadmin_data:
